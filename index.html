@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arena Duel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="hud">
+      <div class="panel">
+        <div class="label">You</div>
+        <div class="bar"><div id="player-health" class="fill player"></div></div>
+      </div>
+      <div class="center-meta">
+        <div id="status">Arena Duel</div>
+        <div class="hint">↑↓ move · ←→ turn · Space pollen</div>
+      </div>
+      <div class="panel">
+        <div class="label">Opponent</div>
+        <div class="bar"><div id="enemy-health" class="fill enemy"></div></div>
+      </div>
+    </div>
+
+    <div id="crosshair"></div>
+    <div id="muzzle"></div>
+
+    <div id="overlay">
+      <div class="card">
+        <h1 id="result-title">Ready</h1>
+        <p id="result-copy">Arrow keys to move and turn. Space to puff pollen. Get shot and you turn into a butterfly.</p>
+        <button id="start-btn" type="button">Enter Arena</button>
+      </div>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
